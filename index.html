@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Procrastination Buster | Design-Led Productivity</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="header">
+                <h1><i class="fas fa-rocket"></i> Procrastination Buster</h1>
+                <p>Strategic task selection to eliminate decision paralysis.</p>
+            </div>
+            
+            <div class="content">
+                <!-- Input Section -->
+                <div class="input-group">
+                    <input type="text" id="taskInput" placeholder="Enter a task you've been putting off...">
+                    <button class="btn btn-primary" id="addTaskBtn">
+                        <i class="fas fa-plus"></i> Add Task
+                    </button>
+                </div>
+                
+                <h2 class="section-title"><i class="fas fa-tasks"></i> Active Backlog</h2>
+                
+                <!-- Task List -->
+                <div class="task-list" id="taskList">
+                    <div class="empty-state" id="emptyState">
+                        <i class="fas fa-clipboard-list"></i>
+                        <h3>Backlog is empty</h3>
+                        <p>Document the tasks you are avoiding to begin.</p>
+                    </div>
+                </div>
+                
+                <!-- Behavioral Intervention Section -->
+                <div class="decision-section">
+                    <button class="btn btn-accent decision-btn" id="pickBtn">
+                        <i class="fas fa-random"></i> Pick For Me!
+                    </button>
+                    
+                    <div id="selectedTaskContainer"></div>
+                </div>
+                
+                <!-- Performance Metrics -->
+                <div class="stats">
+                    <div>Total Backlog: <span id="taskCount">0</span></div>
+                    <div>Session Successes: <span id="completedCount">0</span></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>Designed to reduce cognitive load and facilitate immediate action.</p>
+        </div>
+    </div>
+
+    <!-- Link to JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
