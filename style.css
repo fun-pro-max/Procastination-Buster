@@ -178,3 +178,115 @@ body {
     50% { transform: scale(1.02); }
     100% { transform: scale(1); }
 }
+
+/* ============================= */
+/* RESPONSIVE ENHANCEMENTS LAYER */
+/* ============================= */
+
+/* Make layout fluid */
+.container {
+    padding: 10px;
+}
+
+/* Ensure content never overflows */
+.card {
+    width: 100%;
+}
+
+/* Inputs stack nicely on small screens */
+@media (max-width: 640px) {
+
+    body {
+        padding: 10px;
+        align-items: flex-start;
+    }
+
+    .header {
+        padding: 25px 15px;
+    }
+
+    .header h1 {
+        font-size: 1.5rem;
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .content {
+        padding: 20px 15px;
+    }
+
+    .input-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .input-group input {
+        width: 100%;
+        font-size: 16px; /* prevents iOS zoom */
+    }
+
+    .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .decision-section {
+        padding: 18px;
+    }
+
+    .selected-task p {
+        font-size: 1.2rem;
+        word-break: break-word;
+    }
+
+    .stats {
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+    }
+}
+
+/* Tablet optimization */
+@media (min-width: 641px) and (max-width: 1024px) {
+
+    .container {
+        max-width: 95%;
+    }
+
+    .header h1 {
+        font-size: 1.8rem;
+    }
+
+    .content {
+        padding: 25px;
+    }
+}
+
+/* Large screen refinement */
+@media (min-width: 1400px) {
+
+    .container {
+        max-width: 900px;
+    }
+
+    .header h1 {
+        font-size: 2.3rem;
+    }
+}
+
+/* Prevent long task text from breaking layout */
+.task-text {
+    word-break: break-word;
+}
+
+/* Touch-friendly buttons */
+.task-btn {
+    padding: 10px;
+}
+
+/* Improve tap targets on mobile */
+@media (hover: none) {
+    .btn:hover {
+        transform: none;
+    }
+}
