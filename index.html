@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Link to CSS -->
     <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#6366f1">
+
 </head>
 <body>
     <div class="container">
@@ -63,5 +66,15 @@
 
     <!-- Link to JavaScript -->
     <script src="script.js"></script>
+    <script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('./service-worker.js')
+      .then(reg => console.log("Service Worker Registered"))
+      .catch(err => console.log("SW failed", err));
+  });
+}
+</script>
+
 </body>
 </html>
